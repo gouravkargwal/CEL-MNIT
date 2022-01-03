@@ -28,6 +28,7 @@ html {
 }
 
 .course-card {
+  cursor: pointer;
   margin: 10px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
@@ -47,6 +48,7 @@ html {
 .course-card-description {
   font-size: 14px;
   padding: 8px 0;
+  color: #6c757d;
 }
 
 .course-card-about {
