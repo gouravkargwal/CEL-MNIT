@@ -1,0 +1,100 @@
+/* body,
+html {
+  height: 100%;
+} */
+
+/* hero image */
+.hero-image {
+  background-image: url("./assets/kisibhinaam.jpeg");
+  min-height: 60vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 50px;
+}
+
+.courses-container {
+  margin: 20px;
+}
+
+.highlight {
+  color: #5624d0;
+}
+
+.courses-card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  margin: 20px auto;
+}
+
+.course-card {
+  margin: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.course-card-thumbnail {
+  width: 100%;
+}
+
+.course-card-detail {
+  padding: 12px;
+}
+
+.course-card-heading {
+  font-size: 20px;
+}
+
+.course-card-description {
+  font-size: 14px;
+  padding: 8px 0;
+}
+
+.course-card-about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.course-card-author-name {
+  padding-left: 6px;
+}
+
+.course-card-author-img {
+  width: 40px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.course-card-author-name {
+  font-size: 12px;
+}
+
+.course-card-date {
+  font-size: 12px;
+}
+
+.fa-clock {
+  color: #67c27c;
+  margin-right: 4px;
+}
+
+@media (max-width: 1190px) {
+  .courses-card-container {
+    grid-template-columns: repeat(3, 33.3%);
+  }
+}
+
+@media (max-width: 890px) {
+  .courses-card-container {
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+
+@media (max-width: 620px) {
+  .courses-container {
+    margin: 10px;
+  }
+  .courses-card-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
