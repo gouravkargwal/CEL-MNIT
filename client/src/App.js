@@ -7,7 +7,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Homepage/Home";
 import About from "./components/AboutPage/About";
 import Auth from "./components/Auth/Auth";
-import Placement from "./components/Placements/Placements"
+import Placement from "./components/Placements/Placements";
+import Courses from "./components/Courses/Courses";
 import "./UI/Placement.css"
 
 function App() {
@@ -18,7 +19,8 @@ function App() {
         <Route path="/" exact component={Home} />
         <Route path="/about" exact component={About} />
         <Route path="/signup" exact component={Auth} />
-        <Route path="/ptcell" exact component={Placement}/>
+        <Route path="/ptcell" exact component={Placement} />
+        <Route path="/courses" exact component={Courses} />
       </Switch>
     </Router>
   );
