@@ -8,6 +8,7 @@ import Home from "./components/Homepage/Home";
 import About from "./components/AboutPage/About";
 import Auth from "./components/Auth/Auth";
 import Placement from "./components/Placements/Placements"
+import "./UI/Placement.css"
 
 function App() {
   return (
