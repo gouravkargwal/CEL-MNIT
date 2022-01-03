@@ -9,6 +9,7 @@ import About from "./components/AboutPage/About";
 import Auth from "./components/Auth/Auth";
 import Placement from "./components/Placements/Placements";
 import Courses from "./components/Courses/Courses";
+import "./UI/Placement.css"
 
 function App() {
   return (

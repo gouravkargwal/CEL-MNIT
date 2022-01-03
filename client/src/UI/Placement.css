@@ -1,0 +1,45 @@
+.placement-section {
+    display: flex;
+    padding: 2rem;
+    flex-direction: column;
+}
+.placement-subsection{
+    display: flex;
+    justify-content: space-between;
+}
+.add-button {
+    background: #f8f8f8;
+    color: #5624d0;
+}
+.Card {
+    background: #f8f8f8;
+    border-radius: 1rem;
+    margin: 1rem 0rem;
+    padding: 1rem 1.5rem;
+}
+.Card-title {
+    color: #5624d0;
+}
+.Card-description {
+    color: #b8b8b8;
+    padding: 0.25rem 0;
+    margin-bottom: 0.75rem;
+}
+.input {
+    background: rgba(255, 255, 255, 0.5);
+    border: 0.5px solid black;
+    padding: 5px 5px;
+}
+.tag-area{
+    margin-bottom: 0.75rem;
+}
+.tags{
+    background-color: #8839ff;
+    border-radius: 0.25rem;
+    margin-right: 0.5rem;
+    color: white;
+    padding: 0.25rem;
+}
+  
+  
+  

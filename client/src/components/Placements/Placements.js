@@ -17,8 +17,9 @@ const Placements = () => {
     <div className="placement-section">
       <div className="placement-subsection">
         <SearchInput />
-        <div>
+        <div className="placement-subsection">
           <Button>Add</Button> 
+          <Button>GuideLines</Button>
         </div>
       </div>
       <div>
