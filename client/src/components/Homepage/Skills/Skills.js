@@ -10,17 +10,18 @@ import {
 } from "../../../UI";
 import { School } from "@mui/icons-material";
 
+const FlexColumn = styled(Flex)`
+  width: 250px;
+  flex-direction: column;
+  margin: 20px;
+  background-color: white;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px 0px hsla(0, 0%, 0%, 0.25);
+`;
+
 const Skills = () => {
-  const FlexColumn = styled(Flex)`
-    width: 250px;
-    flex-direction: column;
-    margin: 20px;
-    background-color: white;
-    align-items: center;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 4px 0px hsla(0, 0%, 0%, 0.25);
-  `;
   return (
     <>
       <ContainerPadding grey>

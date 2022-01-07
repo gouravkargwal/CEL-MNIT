@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import LogoImg from "../components/Navbar/CEL logo (1) 1.jpg";
 
 export const Heading = styled.h1`
   font-family: Montserrat;
@@ -61,4 +62,14 @@ export const ButtonOutline = styled.button`
   background-color: white;
   border-radius: 5px;
   color: hsl(258, 69%, 47%, 1);
+  cursor: pointer;
+`;
+
+export const Logo = styled.div`
+  background-image: url(${LogoImg});
+  width: 100px;
+  height: 40px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 `;

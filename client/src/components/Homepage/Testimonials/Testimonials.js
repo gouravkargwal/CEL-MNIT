@@ -5,33 +5,36 @@ import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
 import styled from "styled-components";
 import { ContainerPadding, Heading, SubHeading, TextCenter } from "../../../UI";
 import image1 from "./books_759.jpg";
-const SliderContainer = styled.div`
-    display: flex;
-    margin: 20px;
-    justify-content: space-between;
-    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    @media (max-width: 800px) {
-      align-items: center;
-      flex-direction: column;
-    }
-  `;
-  const SliderBox1 = styled.img`
-    display: block;
-    width: 100vw;
-    height: 40vh;
 
-    max-width: 400px;
-    @media (max-width: 800px) {
-      display: none;
-    }
-  `;
-  const SliderBox2 = styled.div`
-    display: flex;
-    flex-direction: column;
+const SliderContainer = styled.div`
+  display: flex;
+  margin: 20px;
+  justify-content: space-between;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  @media (max-width: 800px) {
     align-items: center;
-    padding: 20px;
-  `;
+    flex-direction: column;
+  }
+`;
+const SliderBox1 = styled.img`
+  display: block;
+  width: 100vw;
+  height: 40vh;
+
+  max-width: 400px;
+  @media (max-width: 800px) {
+    display: none;
+  }
+`;
+const SliderBox2 = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+`;
+
+const Testimonials = (props) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -40,7 +43,6 @@ const SliderContainer = styled.div`
     slidesToScroll: 1,
   };
 
-const Testimonials = (props) => {
   return (
     <ContainerPadding>
       <TextCenter>

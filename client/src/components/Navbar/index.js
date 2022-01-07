@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   Nav,
   NavLink,
@@ -7,10 +8,10 @@ import {
   NavBtn,
   NavBtnLink,
 } from "./NavbarElements";
-import logo from "./CEL logo (1) 1.jpg";
 import styled from "styled-components";
 import { Mail, Phone, DateRangeOutlined } from "@mui/icons-material";
 import SentimentSatisfiedAltIcon from "@mui/icons-material/SentimentSatisfiedAlt";
+import { Logo } from "../../UI";
 
 const NavbarSmall = styled.div`
   display: flex;
@@ -26,6 +27,7 @@ const NavbarSmallFlex = styled.div`
   display: flex;
   align-items: center;
 `;
+
 const Navbar = () => {
   return (
     <>
@@ -45,28 +47,18 @@ const Navbar = () => {
       </NavbarSmall>
       <Nav>
         <NavLink to="/">
-          <img src={logo} alt="logo"></img>
+          <Logo></Logo>
         </NavLink>
-        <Bars />
+        <Link to="/mobilenav">
+          <Bars />
+        </Link>
         <NavMenu>
-          <NavLink to="/" activeStyle>
-            Home
-          </NavLink>
-          <NavLink to="/skills" activeStyle>
-            Skills
-          </NavLink>
-          <NavLink to="/about" activeStyle>
-            About
-          </NavLink>
-          <NavLink to="/contact" activeStyle>
-            Contact
-          </NavLink>
-          <NavLink to="/ptcell" activeStyle>
-            PTcell
-          </NavLink>
-          <NavLink to="/courses" activeStyle>
-            Courses
-          </NavLink>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/skills">Skills</NavLink>
+          <NavLink to="/about">About</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
+          <NavLink to="/ptcell">PTcell</NavLink>
+          <NavLink to="/courses">Courses</NavLink>
         </NavMenu>
         <NavBtn>
           <NavBtnLink to="/signup">Join Now</NavBtnLink>

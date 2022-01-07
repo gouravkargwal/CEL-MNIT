@@ -1,10 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {
-  ContainerPadding,
-  Heading,
-  TextCenter,
-} from "../../../UI";
+import { ContainerPadding, Heading, TextCenter } from "../../../UI";
 
 const CompanyContainer = styled.div`
   display: flex;

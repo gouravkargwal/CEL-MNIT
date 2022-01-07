@@ -8,12 +8,8 @@ import {
   Button,
   Title,
 } from "./AuthStyles";
-import { loginSchema } from "../../Validations/validation";
-import { message } from "antd";
-import axios from "axios";
-import appConstant from "../../Constant/appConstant";
 import { Link } from "react-router-dom";
-import { authenticate, isAuth } from "./Helpers";
+import { isAuth } from "./Helpers";
 
 const Login = () => {
   const [loginEmail, setLoginEmail] = useState("");
@@ -25,25 +21,26 @@ const Login = () => {
       email: loginEmail,
       password: loginPassword,
     };
-    const isValid = await loginSchema.isValid(loginData);
-    if (isValid) {
-      axios
-        .post(`${appConstant.baseURL}/login`, loginData)
-        .then((res) => {
-          console.log(res);
-          authenticate(res, () => {
-            setLoginEmail("");
-            setLoginPassword("");
-            message.success(`Hey ${res.data.user.name}, Welcome Back!`);
-          });
-          //save info and token to localstorage/cookie
-        })
-        .catch((error) => {
-          message.error(error.response.data.error);
-        });
-    } else {
-      message.error("Check Details Again!");
-    }
+    console.log(loginData);
+    // const isValid = await loginSchema.isValid(loginData);
+    // if (isValid) {
+    //   axios
+    //     .post(`${appConstant.baseURL}/login`, loginData)
+    //     .then((res) => {
+    //       console.log(res);
+    //       authenticate(res, () => {
+    //         setLoginEmail("");
+    //         setLoginPassword("");
+    //         message.success(`Hey ${res.data.user.name}, Welcome Back!`);
+    //       });
+    //       //save info and token to localstorage/cookie
+    //     })
+    //     .catch((error) => {
+    //       message.error(error.response.data.error);
+    //     });
+    // } else {
+    //   message.error("Check Details Again!");
+    // }
   };
   return (
     <>
