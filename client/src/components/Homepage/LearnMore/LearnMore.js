@@ -1,10 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {
-  Heading,
-  HeadingBlue,
-  ButtonOutline,
-} from "../../../UI";
+import { Heading, HeadingBlue, ButtonOutline } from "../../../UI";
 import image from "./undraw_features_overview_re_2w78 1.jpg";
 
 const Img = styled.img`

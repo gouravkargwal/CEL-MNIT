@@ -1,15 +1,19 @@
 import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 import "./App.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "./UI/Placement.css";
+
 import Navbar from "./components/Navbar";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Homepage/Home";
 import About from "./components/AboutPage/About";
-import Auth from "./components/Auth/Auth";
 import Placement from "./components/Placements/Placements";
 import Courses from "./components/Courses/Courses";
-import "./UI/Placement.css"
+import Login from "./components/Auth/Login";
+import Register from "./components/Auth/Register";
+import NavbarMobile from "./components/Navbar/NavbarMobile";
 
 function App() {
   return (
@@ -18,9 +22,11 @@ function App() {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/about" exact component={About} />
-        <Route path="/signup" exact component={Auth} />
+        <Route path="/signup" exact component={Register} />
+        <Route path="/signin" exact component={Login} />
         <Route path="/ptcell" exact component={Placement} />
         <Route path="/courses" exact component={Courses} />
+        <Route path="/mobilenav" exact component={NavbarMobile} />
       </Switch>
     </Router>
   );

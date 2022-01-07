@@ -5,40 +5,40 @@ import logo from "../../Navbar/CEL logo (1) 1.jpg";
 import Social from "./Social";
 import { Phone } from "@mui/icons-material";
 
-const Footer = (props) => {
-  const Container = styled.div`
-    background-color: hsla(258, 69%, 47%, 0.08);
-    padding: 20px;
-  `;
+const Container = styled.div`
+  background-color: hsla(258, 69%, 47%, 0.08);
+  padding: 20px;
+`;
 
-  const FooterContainer = styled.div`
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    flex-wrap: wrap;
-    align-items: ${(props) => (props.small ? "center" : "stretch")};
-    @media (max-width: 400px) {
-      flex-direction: column;
-    }
-  `;
-
-  const FooterInfo = styled.div`
-    display: flex;
+const FooterContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  flex-wrap: wrap;
+  align-items: ${(props) => (props.small ? "center" : "stretch")};
+  @media (max-width: 400px) {
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    width: 45vw;
-    @media (max-width: 400px) {
-      width: 80vw;
-    }
-  `;
-  const Info = styled.p``;
+  }
+`;
 
+const FooterInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 45vw;
+  @media (max-width: 400px) {
+    width: 80vw;
+  }
+`;
+const Info = styled.p``;
+
+const Footer = (props) => {
   return (
     <Container>
       <FooterContainer>
         <FooterInfo>
-          <img src={logo} alt="logo"/>
+          <img src={logo} alt="Footer" />
           <Info>
             cel enables students in being capable to develop production grade
             application by availing full stack development, Soft skills,
