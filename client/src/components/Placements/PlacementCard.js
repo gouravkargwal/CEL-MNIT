@@ -1,6 +1,6 @@
 import React from "react";
 const PlacementCard = ({ data }) => {
-  const tags = data.tags;
+  //const tags = data.tags;
 
   return (
     <div className="Card">

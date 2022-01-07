@@ -38,7 +38,7 @@ const Footer = (props) => {
     <Container>
       <FooterContainer>
         <FooterInfo>
-          <img src={logo} />
+          <img src={logo} alt="logo"/>
           <Info>
             cel enables students in being capable to develop production grade
             application by availing full stack development, Soft skills,

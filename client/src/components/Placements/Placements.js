@@ -1,14 +1,7 @@
 import React from "react";
 import PlacementList from "./PlacementList";
 import SearchInput from "./SearchInput";
-import styled from "styled-components";
 import {
-  Flex,
-  Heading,
-  HeadingBlue,
-  SubHeading,
-  ContainerPadding,
-  TextCenter,
   Button
 } from "../../UI";
 

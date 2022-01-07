@@ -2,9 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import {
   ContainerPadding,
-  SubHeading,
   Heading,
-  HeadingBlue,
   TextCenter,
 } from "../../../UI";
 

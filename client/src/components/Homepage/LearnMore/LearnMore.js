@@ -3,9 +3,6 @@ import styled from "styled-components";
 import {
   Heading,
   HeadingBlue,
-  SubHeading,
-  ContainerPadding,
-  TextCenter,
   ButtonOutline,
 } from "../../../UI";
 import image from "./undraw_features_overview_re_2w78 1.jpg";

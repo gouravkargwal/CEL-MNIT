@@ -5,9 +5,7 @@ import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
 import styled from "styled-components";
 import { ContainerPadding, Heading, SubHeading, TextCenter } from "../../../UI";
 import image1 from "./books_759.jpg";
-
-const Testimonials = (props) => {
-  const SliderContainer = styled.div`
+const SliderContainer = styled.div`
     display: flex;
     margin: 20px;
     justify-content: space-between;
@@ -41,6 +39,8 @@ const Testimonials = (props) => {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+
+const Testimonials = (props) => {
   return (
     <ContainerPadding>
       <TextCenter>

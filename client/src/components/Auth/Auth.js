@@ -1,4 +1,4 @@
-import React, { useState, history } from "react";
+import React, { useState } from "react";
 import {
   Container,
   Sidebar,
