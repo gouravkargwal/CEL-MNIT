@@ -2,20 +2,35 @@
     display: flex;
     padding: 2rem;
     flex-direction: column;
+    width: 1060px;
+    margin: 0 auto;
 }
 .placement-subsection{
     display: flex;
     justify-content: space-between;
 }
-.add-button {
-    background: #f8f8f8;
-    color: #5624d0;
+.add-btn {
+    padding: 10px;
+    background-color: hsl(257, 69%, 47%);
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+.guide-btn{
+    padding: 10px;
+    background-color: #5ae97b;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    margin-left: 30px;
 }
 .Card {
-    background: #f8f8f8;
+
     border-radius: 1rem;
     margin: 1rem 0rem;
-    padding: 1rem 1.5rem;
+    padding: 1.5rem 3.5rem;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    cursor: pointer;
 }
 .Card-title {
     color: #5624d0;
@@ -25,11 +40,6 @@
     padding: 0.25rem 0;
     margin-bottom: 0.75rem;
 }
-.input {
-    background: rgba(255, 255, 255, 0.5);
-    border: 0.5px solid black;
-    padding: 5px 5px;
-}
 .tag-area{
     margin-bottom: 0.75rem;
 }
@@ -37,9 +47,16 @@
     background-color: #8839ff;
     border-radius: 0.25rem;
     margin-right: 0.5rem;
-    color: white;
+    color:#fff;
     padding: 0.25rem;
 }
-  
-  
-  
+/* search input */
+.input {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 5px 5px;
+    width: 300px;
+    border:0;
+    outline:0;
+    border-bottom: 1px solid black;
+} 
+

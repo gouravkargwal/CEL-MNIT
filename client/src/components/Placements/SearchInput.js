@@ -7,8 +7,9 @@ const SearchInput = () => {
           className="input"
           type="text"
           placeholder="Try Searching Google"
-        ></input>
+        ></input> 
       </div>
+      
   );
 };
 export default SearchInput;
