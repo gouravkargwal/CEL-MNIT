@@ -7,9 +7,9 @@ const PlacementCard = ({ data }) => {
       <p className="Card-description">{data.description}</p>
       <div className="tag-area">
         {
-          data.tags.map((item)=>{
+          data.tags.map((item,index)=>{
             return (
-              <small className="tags"> {item} </small>
+              <small className="tags" key={index}> {item} </small>
             )
           })
         }

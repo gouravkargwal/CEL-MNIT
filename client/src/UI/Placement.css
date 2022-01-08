@@ -25,7 +25,7 @@
     margin-left: 30px;
 }
 .Card {
-
+    background-color:#f8f8f8;
     border-radius: 1rem;
     margin: 1rem 0rem;
     padding: 1.5rem 3.5rem;
@@ -44,11 +44,12 @@
     margin-bottom: 0.75rem;
 }
 .tags{
-    background-color: #8839ff;
+    background-color: #954ffd;
     border-radius: 0.25rem;
-    margin-right: 0.5rem;
+    margin-right: 1rem;
     color:#fff;
-    padding: 0.25rem;
+    padding: 3px 6px;
+    font-weight: lighter;
 }
 /* search input */
 .input {

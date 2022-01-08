@@ -11,6 +11,7 @@ export const Data = [
                 "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa, veniam!",
         },
         tags : ["flipkart","sde"],
+        id:1,
         description:
             "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae corrupti, veritatis dolorem ex, ipsum molestias voluptatum in blanditiis repellendus ab, possimus vero porro optio aut?",
     },
@@ -26,6 +27,7 @@ export const Data = [
                 "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa, veniam!",
         },
         tags : ["SDE","100daysofcode"],
+        id:2,
         description:
             "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae corrupti, veritatis dolorem ex, ipsum molestias voluptatum in blanditiis repellendus ab, possimus vero porro optio aut?",
     },
@@ -41,6 +43,7 @@ export const Data = [
                 "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa, veniam!",
         },
         tags : ["Amazon","sde"],
+        id:3,
         description:
             "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae corrupti, veritatis dolorem ex, ipsum molestias voluptatum in blanditiis repellendus ab, possimus vero porro optio aut?",
     }
