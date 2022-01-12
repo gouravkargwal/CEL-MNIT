@@ -14,7 +14,12 @@ const PlacementCard = ({ data }) => {
           })
         }
       </div>
-      <small className="Card-subheading">-By {data.name}</small>
+      <small className="Card-profile">
+        <i className="fas fa-user" style={{
+          marginRight : "8px"
+        }}></i>
+        {data.name}
+      </small>
     </div>
   );
 };

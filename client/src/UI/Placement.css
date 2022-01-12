@@ -32,13 +32,15 @@
     box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
     cursor: pointer;
 }
+.Card-profile {
+    font-size: 0.75rem;
+}
 .Card-title {
     color: #5624d0;
 }
 .Card-description {
-    color: #b8b8b8;
-    padding: 0.25rem 0;
-    margin-bottom: 0.75rem;
+    color: #767373;
+    margin: 0.75rem 0;
 }
 .tag-area{
     margin-bottom: 0.75rem;
