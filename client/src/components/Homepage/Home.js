@@ -8,11 +8,13 @@ import Footer from "./Footer/Footer";
 import Testimonials from "./Testimonials/Testimonials";
 import JobPosting from "./JobPosting/JobPosting";
 import LearnMore from "./LearnMore/LearnMore";
+import DailyQuestion from "./DailyQuestion/DailyQuestion";
 
 const Home = () => {
   return (
     <>
       <LearnMore />
+      <DailyQuestion />
       <JobPosting />
       <AboutHome />
       <CountHome />
