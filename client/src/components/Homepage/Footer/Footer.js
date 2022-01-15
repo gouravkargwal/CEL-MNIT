@@ -15,6 +15,7 @@ const FooterContainer = styled.div`
   justify-content: space-between;
   padding: 10px;
   flex-wrap: wrap;
+  height: 100%;
   align-items: ${(props) => (props.small ? "center" : "stretch")};
   @media (max-width: 400px) {
     flex-direction: column;
@@ -31,7 +32,9 @@ const FooterInfo = styled.div`
     width: 80vw;
   }
 `;
-const Info = styled.p``;
+const Info = styled.p`
+  padding: 10px 0;
+`;
 
 const Footer = (props) => {
   return (
