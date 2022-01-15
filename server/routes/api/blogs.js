@@ -1,37 +1,37 @@
 const express = require("express");
 const router = express.Router();
-const Jobs = require("../../models/Job");
+const Blogs = require("../../models/Blog");
 
-// @route GET api/Jobs
-// @description Get all Jobs
+// @route GET api/Blogs
+// @description Get all Blogs
 // @access Public
 router.get("/", (req, res) => {
   const { name } = req.query;
   if (name) {
-    Jobs.find({ name })
+    Blogs.find({ name })
       .then((c) => {
         res.json(c);
       })
       .catch((err) => {
-        res.status(404).json({ noJobsFound: "noJobsFound" });
+        res.status(404).json({ noBlogsFound: "noBlogsFound" });
         console.log(err);
       });
   } else {
-    Job.find()
+    Blogs.find()
       .then((c) => {
         res.json(c);
       })
       .catch((err) => {
-        res.status(404).json({ noJobsFound: "noJobsFound" });
+        res.status(404).json({ noBlogsFound: "noBlogsFound" });
         console.log(err);
       });
   }
 });
 
 router.post("/", (req, res) => {
-  Job.create(req.body)
-    .then((jobs) => {
-      res.json(jobs);
+  Blogs.create(req.body)
+    .then((Blogs) => {
+      res.json(Blogs);
     })
     .catch((e) => {
       res.status(400).json({ error: e });

@@ -1,24 +1,18 @@
 import React, { useEffect } from "react"
-import { useDispatch } from "react-redux"
-import { useHistory } from "react-router"
-import { createExperience, updateExperience } from "../../actions/experiences"
-import Item from "./Item"
+import Button from "../utilities/Button"
+import Input from "../authform/Input"
+import Label from "../portal/Label"
+import { useForm, FormProvider } from "react-hook-form"
 
-const AddQuestion = ({ openForm, setOpenForm, initialData, questionList = true }) => {
+const AddQuestion = ({ openForm, setOpenForm, initialData }) => {
   // const [isLogin, setIsLogin] = useState(true)
   const formMethods = useForm()
   const {
-    control,
     handleSubmit,
     register,
     setValue,
     //  formState: { errors },
   } = formMethods
-
-  const { fields, append, remove } = useFieldArray({
-    control,
-    name: "questions",
-  })
 
   const dispatch = useDispatch()
   const history = useHistory()
@@ -28,14 +22,15 @@ const AddQuestion = ({ openForm, setOpenForm, initialData, questionList = true }
 
   // handle onSubmit event
   const onSubmit = (data) => {
+    console.log(data)
     if (initialData) {
-      dispatch(updateExperience(initialData._id, data))
+      dispatch(updateQuestion(initialData._id, data))
       setOpenForm(!openForm)
-      history.push("/interview-experiences")
+      history.push(`/opportunities/${initialData._id}`)
     } else {
-      dispatch(createExperience({ ...data, name: user?.result?.name }))
+      dispatch(createQuestion({ ...data, name: user?.result?.name }))
       setOpenForm(!openForm)
-      history.push("/interview-experiences")
+      history.push("/opportunities")
     }
   }
 
@@ -59,80 +54,43 @@ const AddQuestion = ({ openForm, setOpenForm, initialData, questionList = true }
       ></div>
 
       <div className="fixed top-0 left-0 z-20">
-        {/* <section className="flex justify-center items-center">
-          <div className="w-full min-h-screen max-w-3xl bg-white rounded-md shadow-sm overflow-y-scroll"> */}
         <FormProvider {...formMethods}>
           <form
             className="w-screen max-w-3xl h-screen bg-white p-14 pb-28"
             onSubmit={handleSubmit(onSubmit)}
           >
             <h1 className="text-2xl font-semibold text-primary-dark">
-              Share your Interview Experience!
+              Share an Question!
             </h1>
-            <div className="overflow-y-scroll w-full h-full flex flex-col px-1 pr-7">
-              <div className="flex justify-between">
-                <div className="mr-4 w-3/4 ">
-                  <Label labelName="Company Name" />
-                  <Input inputName="company" type="text" />
-                </div>
-
-                <div>
-                  <Label labelName="Role" />
-                  <Input inputName="role" type="text" />
-                </div>
+            <div className="overflow-scroll w-full h-full flex flex-col px-1 pr-7">
+              <div>
+                <Label labelName="Company Name" />
+                <Input inputName="company" type="text" />
               </div>
 
               <div>
-                <Label labelName="Question Title" />
-                <small className="text-xs font-semibold text-secondary-dark text-extralight pb-1">
-                  Add a short,descriptive headline
-                </small>
+                <Label labelName="Job Title" />
                 <Input inputName="title" type="text" />
+              </div>
+
+              <div>
+                <Label labelName="Job Link" />
+                <Input inputName="link" type="text" />
               </div>
               <div>
                 <Label labelName="Experience" />
                 <small className="text-xs font-semibold text-secondary-dark text-extralight pb-1">
-                  Feels free to include all sort of questions,tips,resources etc.{" "}
+                  Add a clear, concise Job Description
                 </small>
-                {/* <Input inputName="Detail" type="text" /> */}
                 <textarea
                   name="description"
-                  id="experience"
+                  id="description"
                   cols="30"
                   rows="8"
                   className="w-full bg-secondary-light p-4 rounded-md shadow-sm text-primary-dark font-bold text-sm outline-none focus:ring-1 focus:ring-tertiary-dark"
                   {...register("description", { required: true })}
                 ></textarea>
               </div>
-
-              {/* Question List */}
-              {questionList && (
-                <>
-                  <h1 className=" text-secondary-dark text-light mt-6 mb-2 font-semibold">
-                    Question List
-                  </h1>
-                  <div>
-                    {fields.map((question, index) => (
-                      <Item
-                        key={question.id}
-                        index={index}
-                        fieldId={`questions.${index}`}
-                        remove={remove}
-                      />
-                    ))}
-                  </div>
-                  <button
-                    type="button"
-                    className="w-full bg-secondary-light text-primary-dark border-none rounded-full mt-4 p-4 text-sm font-bold flex justify-center"
-                    onClick={(e) => {
-                      e.preventDefault()
-                      append({ question: "" })
-                    }}
-                  >
-                    <span className="font-semibold mr-1">+</span>Add New Question
-                  </button>
-                </>
-              )}
             </div>
 
             {/* form buttons */}
@@ -152,10 +110,9 @@ const AddQuestion = ({ openForm, setOpenForm, initialData, questionList = true }
             </div>
           </form>
         </FormProvider>
-        {/* </div>
-        </section> */}
       </div>
     </div>
   )
 }
+
 export default AddQuestion
