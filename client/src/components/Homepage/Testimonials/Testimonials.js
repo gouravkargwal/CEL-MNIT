@@ -8,10 +8,8 @@ import image1 from "./books_759.jpg";
 
 const SliderContainer = styled.div`
   display: flex;
-  margin: 20px;
   justify-content: space-between;
-  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
+  border: 2px solid lightgray;
   @media (max-width: 800px) {
     align-items: center;
     flex-direction: column;
@@ -19,12 +17,9 @@ const SliderContainer = styled.div`
 `;
 const SliderBox1 = styled.img`
   display: block;
-  width: 100vw;
-  height: 40vh;
-
-  max-width: 400px;
-  @media (max-width: 800px) {
-    display: none;
+  width: 50%;
+  @media (max-width: 400px) {
+    width: 100%;
   }
 `;
 const SliderBox2 = styled.div`
@@ -38,7 +33,10 @@ const Testimonials = (props) => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    autoplay: true,
+    pauseOnHover: true,
+    autoplaySpeed: 4000,
+    cssEase: "linear",
     slidesToShow: 1,
     slidesToScroll: 1,
   };
@@ -52,7 +50,7 @@ const Testimonials = (props) => {
       <Slider {...settings}>
         <div>
           <SliderContainer>
-            <SliderBox1 src={image1}></SliderBox1>
+            <SliderBox1 src={image1} />
             <SliderBox2>
               <FormatQuoteIcon></FormatQuoteIcon>
               <p>

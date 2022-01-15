@@ -49,11 +49,11 @@ export const TextCenter = styled.div`
 `;
 
 export const Button = styled.button`
-  padding: 10px;
+  padding: 15px;
   background-color: hsl(257, 69%, 47%);
   border: none;
   color: white;
-  border-radius: 5px;
+  border-radius: 3px;
 `;
 
 export const ButtonOutline = styled.button`
