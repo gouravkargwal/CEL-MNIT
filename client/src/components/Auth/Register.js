@@ -9,8 +9,15 @@ import {
   Title,
 } from "./AuthStyles";
 import { isAuth } from "./Helpers";
+import { useSpring, animated } from "react-spring";
 
 const Register = () => {
+  const props = useSpring({
+    to: { opacity: 1 },
+    from: { opacity: 0 },
+    delay: 200,
+  });
+
   const [registerName, setRegisterName] = useState("");
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
@@ -43,41 +50,37 @@ const Register = () => {
     // setRegisterName("");
   };
   return (
-    <>
-      {isAuth() ? (
-        <Redirect to="/login" />
-      ) : (
-        <Container>
-          <Sidebar />
-          <FormContainer>
-            <Title>Register</Title>
-            <Input
-              type="text"
-              placeholder="Name..."
-              onChange={(e) => setRegisterName(e.target.value)}
-              value={registerName}
-            />
-            <Input
-              type="email"
-              placeholder="Email..."
-              onChange={(e) => setRegisterEmail(e.target.value)}
-              value={registerEmail}
-            />
-            <Input
-              type="password"
-              placeholder="Password..."
-              onChange={(e) => setRegisterPassword(e.target.value)}
-              value={registerPassword}
-            />
-            <Button onClick={registerFormHandler}>SignUp</Button>
-            <div className="signup_link">
-              Already a member?
-              <Link to="/login">Login</Link>
-            </div>
-          </FormContainer>
-        </Container>
-      )}
-    </>
+    <animated.div style={props}>
+      <Container>
+        <Sidebar />
+        <FormContainer>
+          <Title>Register</Title>
+          <Input
+            type="text"
+            placeholder="Name..."
+            onChange={(e) => setRegisterName(e.target.value)}
+            value={registerName}
+          />
+          <Input
+            type="email"
+            placeholder="Email..."
+            onChange={(e) => setRegisterEmail(e.target.value)}
+            value={registerEmail}
+          />
+          <Input
+            type="password"
+            placeholder="Password..."
+            onChange={(e) => setRegisterPassword(e.target.value)}
+            value={registerPassword}
+          />
+          <Button onClick={registerFormHandler}>SignUp</Button>
+          <div className="signup_link">
+            Already a member?
+            <Link to="/login">Login</Link>
+          </div>
+        </FormContainer>
+      </Container>
+    </animated.div>
   );
 };
 

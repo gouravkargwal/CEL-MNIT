@@ -7,11 +7,11 @@ import {
   HeadingBlue,
   Heading,
 } from "../../../UI";
-import AccessTimeIcon from "@mui/icons-material/AccessTime";
 
 const CourseCardContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-between;
   @media (max-width: 400px) {
     flex-direction: column;
@@ -27,7 +27,9 @@ const CourseCard = styled.div`
   flex-direction: column;
   background-color: white;
   margin: 10px;
+  border-radius: 5px;
   width: 300px;
+  overflow: hidden;
   box-shadow: 0px 4px 4px 0px hsla(0, 0%, 0%, 0.25);
 `;
 const CourseImage = styled.div`
@@ -35,14 +37,14 @@ const CourseImage = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 30vh;
+  height: 20vh;
 `;
 const CourseInfo = styled.div`
   padding: 20px;
 `;
 const CourseCardFooter = styled.div`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 `;
 const Logo = styled.div`
   background-image: url("../../Navbar/CEL logo (1) 1.jpg");
@@ -69,11 +71,8 @@ const Courses = (props) => {
           <CourseInfo>
             <Heading>React Js</Heading>
             <SubHeading>Lorem djkasd asdksa</SubHeading>
-          </CourseInfo>
-          <CourseCardFooter>
             <Logo></Logo>
-            <p>Oct 10</p>
-          </CourseCardFooter>
+          </CourseInfo>
         </CourseCard>
         <CourseCard>
           <CourseImage
@@ -84,11 +83,11 @@ const Courses = (props) => {
           <CourseInfo>
             <Heading>React Js</Heading>
             <SubHeading>Lorem djkasd asdksa</SubHeading>
+            <CourseCardFooter>
+              <Logo></Logo>
+              <p>Oct 10</p>
+            </CourseCardFooter>
           </CourseInfo>
-          <CourseCardFooter>
-            <Logo></Logo>
-            <p>Oct 10</p>
-          </CourseCardFooter>
         </CourseCard>
         <CourseCard>
           <CourseImage
@@ -97,11 +96,8 @@ const Courses = (props) => {
           <CourseInfo>
             <Heading>React Js</Heading>
             <SubHeading>Lorem djkasd asdksa</SubHeading>
-          </CourseInfo>
-          <CourseCardFooter>
             <Logo></Logo>
-            <p>Oct 10</p>
-          </CourseCardFooter>
+          </CourseInfo>
         </CourseCard>
         <CourseCard>
           <CourseImage
@@ -112,11 +108,8 @@ const Courses = (props) => {
           <CourseInfo>
             <Heading>React Js</Heading>
             <SubHeading>Lorem djkasd asdksa</SubHeading>
-          </CourseInfo>
-          <CourseCardFooter>
             <Logo></Logo>
-            <p>Oct 10</p>
-          </CourseCardFooter>
+          </CourseInfo>
         </CourseCard>
       </CourseCardContainer>
     </ContainerPadding>

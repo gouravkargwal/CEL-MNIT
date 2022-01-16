@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Heading, HeadingBlue, SubText } from "../../UI/index";
+import { useSpring, animated } from "react-spring";
 
 const InfoContainer = styled.div`
   display: flex;
@@ -20,24 +21,16 @@ const FlexIcon = styled.div`
   justify-content: space-evenly;
   padding: 20px;
 `;
-const Img = styled.img`
-  display: block;
-  width: 40%;
-  margin-right: 10px;
-  @media (max-width: 800px) {
-    margin-right: 0px;
-    width: 100%;
-  }
-`;
-const ImgSvg = styled.img`
-  display: block;
-  width: 50px;
-  margin-right: 20px;
-`;
 
 const About = () => {
+  const props = useSpring({
+    to: { opacity: 1 },
+    from: { opacity: 0 },
+    delay: 200,
+  });
+
   return (
-    <>
+    <animated.div style={props}>
       <InfoContainer>
         <Info>
           <Heading>LEARN AT YOUR OWN PACE</Heading>
@@ -106,7 +99,7 @@ const About = () => {
           </FlexIcon>
         </Info>
       </InfoContainer>
-    </>
+    </animated.div>
   );
 };
 

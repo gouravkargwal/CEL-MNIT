@@ -61,8 +61,10 @@ export const Button = styled.button`
   background-color: hsl(208, 100%, 54%);
   color: white;
   border-radius: 5px;
+  opacity: 0.6;
+  transition: 0.3s;
   &:hover {
-    background-color: hsl(270, 98%, 52%);
+    opacity: 1;
   }
 `;
 export const Title = styled.h1`

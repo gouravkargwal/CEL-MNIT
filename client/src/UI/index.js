@@ -49,11 +49,15 @@ export const TextCenter = styled.div`
 `;
 
 export const Button = styled.button`
-  padding: 15px;
+  padding: 10px;
   background-color: hsl(257, 69%, 47%);
   border: none;
-  color: white;
-  border-radius: 3px;
+  border-radius: 5px;
+  opacity: 1;
+  transition: 0.3s;
+  &:hover {
+    opacity: 0.8;
+  }
 `;
 
 export const ButtonOutline = styled.button`
@@ -72,4 +76,14 @@ export const Logo = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+`;
+
+export const ListContainer = styled.ul`
+  padding: 0;
+  margin: 0;
+`;
+
+export const ListItem = styled.li`
+  list-style: none;
+  cursor: pointer;
 `;

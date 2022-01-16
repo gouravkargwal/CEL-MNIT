@@ -23,7 +23,6 @@ const FlexColumn = styled.div`
   min-width: 250px;
   display: flex;
   width: 250px;
-
   flex-direction: column;
   margin: 20px;
   background-image: linear-gradient(

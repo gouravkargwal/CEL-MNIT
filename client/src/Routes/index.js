@@ -7,8 +7,7 @@ import Placement from "../components/Placements/Placements";
 import Courses from "../components/Courses/Courses";
 import Login from "../components/Auth/Login";
 import Register from "../components/Auth/Register";
-import NavbarMobile from "../components/Navbar/NavbarMobile";
-import ForgotPassword from "../components/Auth/ForgotPassword";
+// import ForgotPassword from "../components/Auth/ForgotPassword";
 
 const AllRoute = () => {
   return (
@@ -17,10 +16,9 @@ const AllRoute = () => {
       <Route path="/about" exact component={About} />
       <Route path="/register" exact component={Register} />
       <Route path="/login" exact component={Login} />
-      <Route path="/forgot-password" exact component={ForgotPassword} />
-      <Route path="/ptcell" exact component={Placement} />
+      {/* <Route path="/forgot-password" exact component={ForgotPassword} /> */}
+      <Route path="/mentorship" exact component={Placement} />
       <Route path="/courses" exact component={Courses} />
-      <Route path="/mobilenav" exact component={NavbarMobile} />
     </>
   );
 };

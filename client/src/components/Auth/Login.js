@@ -10,8 +10,15 @@ import {
 } from "./AuthStyles";
 import { Link } from "react-router-dom";
 import { isAuth } from "./Helpers";
+import { useSpring, animated } from "react-spring";
 
 const Login = () => {
+  const props = useSpring({
+    to: { opacity: 1 },
+    from: { opacity: 0 },
+    delay: 200,
+  });
+
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
 
@@ -43,36 +50,34 @@ const Login = () => {
     // }
   };
   return (
-    <>
-      {isAuth() ? (
-        <Redirect to="/" />
-      ) : (
-        <Container>
-          <Sidebar />
-          <FormContainer>
-            <Title>Login</Title>
-            <Input
-              type="email"
-              placeholder="Email..."
-              onChange={(e) => setLoginEmail(e.target.value)}
-              value={loginEmail}
-            />
-            <Input
-              type="password"
-              placeholder="Password..."
-              onChange={(e) => setLoginPassword(e.target.value)}
-              value={loginPassword}
-            />
-            <Link to="/forgot-password">Forgot Password?</Link>
-            <Button onClick={loginFormHandler}>Login</Button>
-            <div className="signup_link">
-              Not a member?
-              <Link to="/register">Signup</Link>
-            </div>
-          </FormContainer>
-        </Container>
-      )}
-    </>
+    <animated.div style={props}>
+      <Container>
+        <Sidebar />
+        <FormContainer>
+          <Title>Login</Title>
+          <Input
+            type="email"
+            placeholder="Email..."
+            onChange={(e) => setLoginEmail(e.target.value)}
+            value={loginEmail}
+          />
+          <Input
+            type="password"
+            placeholder="Password..."
+            onChange={(e) => setLoginPassword(e.target.value)}
+            value={loginPassword}
+          />
+          <a className="forgot" href="www.facebook.com">
+            Forgot Password?
+          </a>
+          <Button onClick={loginFormHandler}>Login</Button>
+          <div className="signup_link">
+            Not a member?
+            <Link to="/register">Signup</Link>
+          </div>
+        </FormContainer>
+      </Container>
+    </animated.div>
   );
 };
 
