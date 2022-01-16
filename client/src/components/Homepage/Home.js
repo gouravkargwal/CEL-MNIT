@@ -8,6 +8,7 @@ import Testimonials from "./Testimonials/Testimonials";
 import JobPosting from "./JobPosting/JobPosting";
 import LearnMore from "./LearnMore/LearnMore";
 import { useSpring, animated } from "react-spring";
+import DailyQuestion from "./DailyQuestion/DailyQuestion";
 
 const Home = () => {
   const props = useSpring({
@@ -18,6 +19,7 @@ const Home = () => {
   return (
     <animated.div style={props}>
       <LearnMore />
+      <DailyQuestion />
       <JobPosting />
       <AboutHome />
       <CountHome />

@@ -38,15 +38,15 @@ const DropDownList = styled("ul")`
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     border-radius: 5px;
     position: absolute;
-    top: 30px;
-    padding-top: 10px;
+    top: 35px;
+    padding: 20px;
   }
 `;
 
 const DropDownListItem = styled("li")`
   list-style: none;
   cursor: pointer;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 `;
 
 const Navbar = () => {

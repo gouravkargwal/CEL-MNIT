@@ -14,6 +14,7 @@ const PostingCard = styled.div`
   background: #ffffff;
   border-radius: 15px;
   padding: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 `;
 const PostCardFlexConatiner = styled.div`
   display: flex;
