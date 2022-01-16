@@ -30,7 +30,7 @@ const CourseCard = styled.div`
   border-radius: 5px;
   width: 300px;
   overflow: hidden;
-  box-shadow: 0px 4px 4px 0px hsla(0, 0%, 0%, 0.25);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 `;
 const CourseImage = styled.div`
   background-image: url(${(props) => props.imgsrc});

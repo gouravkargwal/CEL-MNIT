@@ -51,11 +51,14 @@ export const TextCenter = styled.div`
 export const Button = styled.button`
   padding: 10px;
   background-color: hsl(257, 69%, 47%);
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   border: none;
   border-radius: 5px;
   opacity: 1;
   transition: 0.3s;
   &:hover {
+    border-radius: 0px;
     opacity: 0.8;
   }
 `;
@@ -64,9 +67,16 @@ export const ButtonOutline = styled.button`
   padding: 10px;
   border-color: hsl(257, 69%, 47%);
   background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   border-radius: 5px;
   color: hsl(258, 69%, 47%, 1);
   cursor: pointer;
+  opacity: 1;
+  transition: 0.3s;
+  &:hover {
+    border-radius: 0px;
+    opacity: 0.8;
+  }
 `;
 
 export const Logo = styled.div`
@@ -86,4 +96,10 @@ export const ListContainer = styled.ul`
 export const ListItem = styled.li`
   list-style: none;
   cursor: pointer;
+`;
+
+export const LogoImgFooter = styled.img`
+  display: block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border-radius: 5px;
 `;

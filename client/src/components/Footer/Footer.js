@@ -1,6 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import { Heading, Button, ListContainer, ListItem } from "../../UI";
+import {
+  Heading,
+  Button,
+  ListContainer,
+  ListItem,
+  LogoImgFooter,
+} from "../../UI";
 import logo from "../Navbar/CEL logo (1) 1.jpg";
 import Social from "./Social";
 import { Phone } from "@mui/icons-material";
@@ -73,7 +79,7 @@ const Footer = (props) => {
             in the Industry.
           </Info>
           <Button style={{ marginBottom: "15px" }}>Apply Now</Button>
-          <img src={logo} alt="Footer" style={{ display: "block" }} />
+          <LogoImgFooter src={logo} alt="Footer" />
         </FooterInfo>
         <FooterMenu>
           <ListContainerFooter>

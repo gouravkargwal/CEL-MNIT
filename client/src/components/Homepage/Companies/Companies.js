@@ -15,6 +15,8 @@ const CompanyContainer = styled.div`
   }
 `;
 const ComapanyImage = styled.img`
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border-radius: 5px;
   width: 15vw;
   margin: 10px;
   @media (max-width: 768px) {
@@ -26,7 +28,7 @@ const ComapanyImage = styled.img`
 `;
 const Companies = () => {
   return (
-    <ContainerPadding grey>
+    <ContainerPadding grey style={{ margin: "15px 0" }}>
       <TextCenter>
         <Heading>Associated Companies</Heading>
       </TextCenter>

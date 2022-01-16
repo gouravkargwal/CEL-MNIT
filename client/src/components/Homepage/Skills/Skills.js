@@ -37,7 +37,7 @@ const FlexColumn = styled.div`
   padding: 20px;
   justify-content: space-evenly;
   border-radius: 5px;
-  box-shadow: 0px 0px 4px 0px hsla(0, 0%, 0%, 0.25);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   @media (max-width: 730px) {
     width: 300px;
   }

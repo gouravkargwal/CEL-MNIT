@@ -17,6 +17,9 @@ const Info = styled.div`
   text-align: center;
 `;
 const FlexIcon = styled.div`
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  margin: 20px 0;
+  border-radius: 5px;
   display: flex;
   justify-content: space-evenly;
   padding: 20px;

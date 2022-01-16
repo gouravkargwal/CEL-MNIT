@@ -5,6 +5,8 @@ export const NavbarContainer = styled.div`
   grid-template-columns: 2rem 1fr 3fr 4rem;
   width: 100%;
   align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  background-color: white;
 `;
 
 export const Brand = styled.div`
@@ -12,6 +14,7 @@ export const Brand = styled.div`
 `;
 
 export const Menu = styled.div`
+  z-index: 5;
   display: flex;
   flex-direction: column;
   justify-content: center;
