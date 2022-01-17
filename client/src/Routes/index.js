@@ -7,6 +7,7 @@ import Placement from "../components/Placements/Placements";
 import Courses from "../components/Courses/Courses";
 import Login from "../components/Auth/Login";
 import Register from "../components/Auth/Register";
+import NotFound from "../components/NotFound/NotFound";
 // import ForgotPassword from "../components/Auth/ForgotPassword";
 
 const AllRoute = () => {
@@ -19,6 +20,7 @@ const AllRoute = () => {
       {/* <Route path="/forgot-password" exact component={ForgotPassword} /> */}
       <Route path="/mentorship" exact component={Placement} />
       <Route path="/courses" exact component={Courses} />
+      {/* <Route component={NotFound} /> */}
     </>
   );
 };
