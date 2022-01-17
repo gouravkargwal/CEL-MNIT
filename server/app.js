@@ -19,9 +19,9 @@ connectDB();
 //using routes
 app.use("/courses", coursesRoutes);
 app.use("/ptcell", experiencesRoutes);
-app.use("/user", userRoutes);
-app.use("/ptcell/blogs", blogsRoutes);
-app.use("/ptcell/jobs", opportunitiesRoutes);
+app.use("/Register", userRoutes);
+app.use("/blogs", blogsRoutes);
+app.use("/mentorship", opportunitiesRoutes);
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => console.log(`Server running on port ${port}`));
