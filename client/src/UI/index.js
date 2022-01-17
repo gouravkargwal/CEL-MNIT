@@ -2,35 +2,27 @@ import styled from "styled-components";
 import LogoImg from "../components/Navbar/CEL logo (1) 1.jpg";
 
 export const Heading = styled.h1`
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 25px;
+  font-size: 2em;
+  font-weight: 700;
   line-height: 50px;
   color: #000000;
 `;
 
 export const SubHeading = styled.h2`
   color: #b6b2bf;
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 15px;
+  font-weight: 400;
+  font-size: 1.4em;
 `;
 
 export const HeadingBlue = styled.h2`
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
+  font-weight: 700;
+  font-size: 1.1em;
   color: #5725cc;
 `;
 
 export const SubText = styled.p`
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 19px;
+  font-weight: 600;
+  font-size: 1em;
   color: #767373;
 `;
 
@@ -86,6 +78,7 @@ export const Logo = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 `;
 
 export const ListContainer = styled.ul`

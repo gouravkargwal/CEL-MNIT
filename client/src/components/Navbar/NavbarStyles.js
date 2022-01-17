@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const NavbarContainer = styled.div`
   display: grid;
-  grid-template-columns: 2rem 1fr 3fr 4rem;
+  grid-template-columns: 2rem 1fr 3fr 3rem;
   width: 100%;
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
@@ -59,6 +59,7 @@ export const NavbarListItem = styled.li`
   width: 10rem;
   &:hover {
     color: hsl(258.07, 69.17%, 47.06%);
+    font-weight: bold;
   }
   @media only screen and (min-width: 800px) {
     padding: 0 10px;
@@ -73,11 +74,12 @@ export const MenuLabel = styled.label`
   background-color: white;
   border: 3px solid hsl(258.07, 69.17%, 47.06%);
   position: relative;
-  height: 3rem;
+  height: 50px;
+  width: 60px;
   grid-column: 4/5;
   cursor: pointer;
   z-index: 1000;
-  margin-right: 2px;
+  margin-right: 10px;
   text-align: center;
   @media only screen and (min-width: 800px) {
     display: none;
@@ -87,16 +89,16 @@ export const MenuLabel = styled.label`
 export const Icon = styled.span`
   position: relative;
   background-color: ${(props) => (props.clicked ? "transparent" : "black")};
-  width: 2rem;
+  width: 15px;
   height: 2px;
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 21px;
   transition: all 0.3s;
   &::before,
   &::after {
     content: "";
     background-color: black;
-    width: 2rem;
+    width: 15px;
     height: 2px;
     display: inline-block;
     position: absolute;
@@ -104,11 +106,11 @@ export const Icon = styled.span`
     transition: all 0.3s;
   }
   &::before {
-    top: ${(props) => (props.clicked ? "0" : "-0.8rem")};
+    top: ${(props) => (props.clicked ? "0" : "-0.4rem")};
     transform: ${(props) => (props.clicked ? "rotate(135deg)" : "rotate(0)")};
   }
   &::after {
-    top: ${(props) => (props.clicked ? "0" : "0.8rem")};
+    top: ${(props) => (props.clicked ? "0" : "0.4rem")};
     transform: ${(props) => (props.clicked ? "rotate(-135deg)" : "rotate(0)")};
   }
 `;

@@ -15,6 +15,13 @@ import { Button } from "../../UI/index";
 import { useSpring } from "react-spring";
 import styled from "styled-components";
 
+const DropDownTitle = styled.span`
+  cursor: pointer;
+  &:hover {
+    font-weight: bold;
+  }
+`;
+
 const DropDownList = styled("ul")`
   z-index: 5;
   position: relative;
@@ -49,6 +56,10 @@ const DropDownListItem = styled("li")`
   list-style: none;
   cursor: pointer;
   margin-bottom: 15px;
+  &:hover {
+    color: hsl(258.07, 69.17%, 47.06%);
+    font-weight: bold;
+  }
 `;
 
 const Overlay = styled.div`
@@ -128,7 +139,7 @@ const Navbar = () => {
               <NavbarListItem>Contact</NavbarListItem>
             </Link>
             <NavbarListItem>
-              <span onClick={toggling}>PTCell+</span>
+              <DropDownTitle onClick={toggling}>PTCell+</DropDownTitle>
               {isOpenDropDown && (
                 <DropDownList clicked={isOpenDropDown}>
                   <Link to="/mentorship">

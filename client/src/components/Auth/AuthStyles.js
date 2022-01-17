@@ -63,10 +63,14 @@ export const Button = styled.button`
   border-radius: 5px;
   opacity: 0.6;
   transition: 0.3s;
+  font-size: 1em;
   &:hover {
     opacity: 1;
+    border-radius: 0;
   }
 `;
 export const Title = styled.h1`
   color: hsl(245, 93%, 75%);
+  font-size: 2em;
+  font-weight: 700;
 `;

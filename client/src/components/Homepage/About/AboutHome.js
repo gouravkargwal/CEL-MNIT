@@ -26,6 +26,7 @@ const Img = styled.img`
   display: block;
   width: 30vw;
   max-width: 300px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   @media (max-width: 800px) {
     display: none;
   }
