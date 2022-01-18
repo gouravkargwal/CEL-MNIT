@@ -10,6 +10,7 @@ import {
 } from "./AuthStyles";
 import { isAuth } from "./Helpers";
 import { useSpring, animated } from "react-spring";
+import "./Background.css";
 
 const Register = () => {
   const props = useSpring({
@@ -80,6 +81,20 @@ const Register = () => {
           </div>
         </FormContainer>
       </Container>
+      <div class="area">
+        <ul class="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
     </animated.div>
   );
 };
