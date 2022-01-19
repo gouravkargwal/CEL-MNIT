@@ -7,7 +7,6 @@ import {
   ContainerPadding,
   TextCenter,
 } from "../../../UI";
-import { School } from "@mui/icons-material";
 import Network from "./assets/network-svgrepo-com.svg";
 import Communication from "./assets/communication-svgrepo-com.svg";
 import Leader from "./assets/leadership-svgrepo-com.svg";

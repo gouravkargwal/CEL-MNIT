@@ -1,16 +1,10 @@
 import React, { useState } from "react";
-import { Link, Redirect } from "react-router-dom";
-import {
-  Container,
-  Sidebar,
-  FormContainer,
-  Input,
-  Button,
-  Title,
-} from "./AuthStyles";
-import { isAuth } from "./Helpers";
+import { Link } from "react-router-dom";
+import { Container, Sidebar, FormContainer, Input, Title } from "./AuthStyles";
+import { Button } from "../../UI";
 import { useSpring, animated } from "react-spring";
 import "./Background.css";
+import SidebarImage from "./caleb-george-5sF6NrB1MEg-unsplash.jpg";
 
 const Register = () => {
   const props = useSpring({
@@ -53,7 +47,7 @@ const Register = () => {
   return (
     <animated.div style={props}>
       <Container>
-        <Sidebar />
+        <Sidebar bgImg={SidebarImage} />
         <FormContainer>
           <Title>Register</Title>
           <Input

@@ -1,17 +1,10 @@
 import React, { useState } from "react";
-import { Redirect } from "react-router-dom";
-import {
-  Container,
-  Sidebar,
-  FormContainer,
-  Input,
-  Button,
-  Title,
-} from "./AuthStyles";
+import { Container, Sidebar, FormContainer, Input, Title } from "./AuthStyles";
+import { Button } from "../../UI";
 import { Link } from "react-router-dom";
-import { isAuth } from "./Helpers";
 import { useSpring, animated } from "react-spring";
 import "./Background.css";
+import SidebarImage from "./caleb-george-5sF6NrB1MEg-unsplash.jpg";
 
 const Login = () => {
   const props = useSpring({
@@ -53,7 +46,7 @@ const Login = () => {
   return (
     <animated.div style={props}>
       <Container>
-        <Sidebar />
+        <Sidebar bgImg={SidebarImage} />
         <FormContainer>
           <Title>Login</Title>
           <Input

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import SidebarImage from "./caleb-george-5sF6NrB1MEg-unsplash.jpg";
 
 export const Container = styled.div`
   display: flex;
@@ -10,14 +9,17 @@ export const Container = styled.div`
   align-items: center;
   padding: 20px;
   position: absolute;
+  z-index: 1;
 `;
 
 export const Sidebar = styled.div`
-  display: block;
+  display: flex;
+  flex-direction: column;
   height: 80vh;
   width: 40vw;
+  padding: 20px;
   max-width: 370px;
-  background-image: url(${SidebarImage});
+  background-image: url(${(props) => props.bgImg});
   background-size: cover;
   background-repeat: no-repeat;
   border-top-left-radius: 5px;

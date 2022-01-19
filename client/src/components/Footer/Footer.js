@@ -1,15 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import {
-  Heading,
-  Button,
-  ListContainer,
-  ListItem,
-  LogoImgFooter,
-} from "../../UI";
+import { Button, ListContainer, ListItem, LogoImgFooter } from "../../UI";
 import logo from "../Navbar/CEL logo (1) 1.jpg";
-import Social from "./Social";
-import { Phone } from "@mui/icons-material";
+
 import FollowUs from "./FollowUs";
 
 const FooterContainer = styled.div`

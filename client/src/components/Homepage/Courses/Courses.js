@@ -20,14 +20,6 @@ const CourseCardContainer = styled.div`
     grid-template-columns: 1fr;
   }
 `;
-
-const Logo = styled.div`
-  background-image: url("../../Navbar/CEL logo (1) 1.jpg");
-  margin-top: 10px;
-  background-size: cover;
-  width: 50px;
-  height: 25px;
-`;
 const Courses = (props) => {
   return (
     <ContainerPadding>
