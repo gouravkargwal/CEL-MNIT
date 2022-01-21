@@ -15,7 +15,7 @@ export const Brand = styled.div`
 
 export const Menu = styled.div`
   z-index: 5;
-  display: flex;
+  display: ${(props) => (props.clicked ? "flex" : "none")};
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -30,6 +30,7 @@ export const Menu = styled.div`
     props.clicked ? "translateX(0)" : "translateX(100%)"};
 
   @media only screen and (min-width: 800px) {
+    display: flex;
     position: initial;
     flex-direction: row;
     transform: translate(0, 0);

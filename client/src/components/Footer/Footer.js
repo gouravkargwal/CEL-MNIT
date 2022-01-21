@@ -65,6 +65,7 @@ const Footer = (props) => {
     <>
       <FooterContainer>
         <FooterInfo>
+          <LogoImgFooter src={logo} alt="Footer" />
           <Info>
             Cel enables students in being capable to develop production grade
             application by availing full stack development, Soft skills,
@@ -72,7 +73,6 @@ const Footer = (props) => {
             in the Industry.
           </Info>
           <Button style={{ marginBottom: "15px" }}>Apply Now</Button>
-          <LogoImgFooter src={logo} alt="Footer" />
         </FooterInfo>
         <FooterMenu>
           <ListContainerFooter>

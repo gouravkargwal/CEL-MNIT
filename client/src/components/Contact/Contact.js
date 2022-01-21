@@ -2,7 +2,7 @@ import { LocationOn, Mail, PhoneAndroid } from "@mui/icons-material";
 import React from "react";
 import { animated, useSpring } from "react-spring";
 import styled from "styled-components";
-import { Button, SubText } from "../../UI";
+import { Button } from "../../UI";
 import { Title, Input } from "../Auth/AuthStyles";
 
 const ContainerContact = styled.div`
