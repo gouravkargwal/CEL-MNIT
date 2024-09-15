@@ -1,17 +1,18 @@
 import React, { useState } from "react";
-import { Redirect } from "react-router-dom";
-import {
-  Container,
-  Sidebar,
-  FormContainer,
-  Input,
-  Button,
-  Title,
-} from "./AuthStyles";
+import { Container, Sidebar, FormContainer, Input, Title } from "./AuthStyles";
+import { Button } from "../../UI";
 import { Link } from "react-router-dom";
-import { isAuth } from "./Helpers";
+import { useSpring, animated } from "react-spring";
+import "./Background.css";
+import SidebarImage from "./caleb-george-5sF6NrB1MEg-unsplash.jpg";
 
 const Login = () => {
+  const props = useSpring({
+    to: { opacity: 1 },
+    from: { opacity: 0 },
+    delay: 200,
+  });
+
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
 
@@ -43,36 +44,49 @@ const Login = () => {
     // }
   };
   return (
-    <>
-      {isAuth() ? (
-        <Redirect to="/" />
-      ) : (
-        <Container>
-          <Sidebar />
-          <FormContainer>
-            <Title>Login</Title>
-            <Input
-              type="email"
-              placeholder="Email..."
-              onChange={(e) => setLoginEmail(e.target.value)}
-              value={loginEmail}
-            />
-            <Input
-              type="password"
-              placeholder="Password..."
-              onChange={(e) => setLoginPassword(e.target.value)}
-              value={loginPassword}
-            />
-            <Link to="/forgot-password">Forgot Password?</Link>
-            <Button onClick={loginFormHandler}>Login</Button>
-            <div className="signup_link">
-              Not a member?
-              <Link to="/register">Signup</Link>
-            </div>
-          </FormContainer>
-        </Container>
-      )}
-    </>
+    <animated.div style={props}>
+      <Container>
+        <Sidebar bgImg={SidebarImage} />
+        <FormContainer>
+          <Title>Login</Title>
+          <Input
+            type="email"
+            placeholder="Email..."
+            onChange={(e) => setLoginEmail(e.target.value)}
+            value={loginEmail}
+          />
+          <Input
+            type="password"
+            placeholder="Password..."
+            onChange={(e) => setLoginPassword(e.target.value)}
+            value={loginPassword}
+          />
+          <a className="forgot" href="www.facebook.com">
+            Forgot Password?
+          </a>
+          <Button onClick={loginFormHandler}>Login</Button>
+          <div className="signup_link">
+            Not a member?
+            <Link to="/register">Signup</Link>
+          </div>
+        </FormContainer>
+      </Container>
+
+      <div class="area">
+        <ul class="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </animated.div>
   );
 };
 

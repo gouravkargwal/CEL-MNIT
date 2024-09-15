@@ -7,7 +7,14 @@ import {
   ContainerPadding,
   TextCenter,
 } from "../../../UI";
-import { School } from "@mui/icons-material";
+import Network from "./assets/network-svgrepo-com.svg";
+import Communication from "./assets/communication-svgrepo-com.svg";
+import Leader from "./assets/leadership-svgrepo-com.svg";
+import Web from "./assets/web-development-svgrepo-com.svg";
+import Video from "./assets/video-editing-svgrepo-com.svg";
+import Creative from "./assets/thinking-learning-svgrepo-com.svg";
+import Personal from "./assets/personal-privacy-svgrepo-com.svg";
+import Manage from "./assets/browser-content-svgrepo-com.svg";
 
 const SkillsContainer = styled.div`
   display: flex;
@@ -23,7 +30,6 @@ const FlexColumn = styled.div`
   min-width: 250px;
   display: flex;
   width: 250px;
-
   flex-direction: column;
   margin: 20px;
   background-image: linear-gradient(
@@ -38,12 +44,15 @@ const FlexColumn = styled.div`
   padding: 20px;
   justify-content: space-evenly;
   border-radius: 5px;
-  box-shadow: 0px 0px 4px 0px hsla(0, 0%, 0%, 0.25);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   @media (max-width: 730px) {
     width: 300px;
   }
 `;
-
+const ImgSkills = styled.img`
+  width: 4rem;
+  padding: 10px;
+`;
 const Skills = () => {
   return (
     <>
@@ -55,7 +64,7 @@ const Skills = () => {
         </TextCenter>
         <SkillsContainer>
           <FlexColumn>
-            <School sx={{ color: `hsl(257,69%,47%)`, fontSize: 80 }} />
+            <ImgSkills src={Network} />
             <h3>Networking</h3>
             <p>
               Exchanging information on challenges, experiences, and goals is a
@@ -64,27 +73,24 @@ const Skills = () => {
             </p>
           </FlexColumn>
           <FlexColumn>
-            <School sx={{ color: `hsl(257,69%,47%)`, fontSize: 80 }} />
-            <h3>Communication</h3>
-            <h3>skill</h3>
+            <ImgSkills src={Communication} />
+            <h3>Communication Skill</h3>
             <p>
               Students will learn presentation skills, negotiation skills,
               influencing skills, and teamwork building.
             </p>
           </FlexColumn>
           <FlexColumn>
-            <School sx={{ color: `hsl(257,69%,47%)`, fontSize: 80 }} />
-            <h3>Website</h3>
-            <h3> development</h3>
+            <ImgSkills src={Web} />
+            <h3>Web development</h3>
             <p>
               Students will learn how to design and execute parts in addition to
               the front-end and back-end knowledge.
             </p>
           </FlexColumn>
           <FlexColumn>
-            <School sx={{ color: `hsl(257,69%,47%)`, fontSize: 80 }} />
-            <h3>Creative</h3>
-            <h3>Thinking</h3>
+            <ImgSkills src={Creative} />
+            <h3>Creative Thinking</h3>
             <p>
               Allows students a way of looking at problems or situations from a
               fresh perspective that suggests unorthodox solutions (which may
@@ -92,7 +98,7 @@ const Skills = () => {
             </p>
           </FlexColumn>
           <FlexColumn>
-            <School sx={{ color: `hsl(257,69%,47%)`, fontSize: 80 }} />
+            <ImgSkills src={Video} />
             <h3>Video Editing</h3>
             <p>
               Will introduce students to all the required tools and how to use
@@ -100,26 +106,22 @@ const Skills = () => {
             </p>
           </FlexColumn>
           <FlexColumn>
-            <School sx={{ color: `hsl(257,69%,47%)`, fontSize: 80 }} />
-            <h3>Management</h3>
+            <ImgSkills src={Manage} /> <h3>Management</h3>
             <p>
               Students will learn planning, controlling, leading, organizing,
               flexibility and resilience.
             </p>
           </FlexColumn>
           <FlexColumn>
-            <School sx={{ color: `hsl(257,69%,47%)`, fontSize: 80 }} />
-            <h3>Leadership</h3>
-            <h3>qualities</h3>
+            <ImgSkills src={Leader} /> <h3>Leadership qualities</h3>
             <p>
               Students will learn leadership traits that include honesty,
               confidence, commitment, and creativity.
             </p>
           </FlexColumn>
           <FlexColumn>
-            <School sx={{ color: `hsl(257,69%,47%)`, fontSize: 80 }} />
-            <h3>Personal</h3>
-            <h3>branding</h3>
+            <ImgSkills src={Personal} />
+            <h3>Personal Branding</h3>
             <p>
               Students will learn how to become better at articulating and
               expressing what they do, what makes you different, and what you

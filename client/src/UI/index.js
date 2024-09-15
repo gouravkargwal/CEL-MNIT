@@ -2,35 +2,27 @@ import styled from "styled-components";
 import LogoImg from "../components/Navbar/CEL logo (1) 1.jpg";
 
 export const Heading = styled.h1`
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 25px;
+  font-size: 2em;
+  font-weight: 700;
   line-height: 50px;
   color: #000000;
 `;
 
 export const SubHeading = styled.h2`
   color: #b6b2bf;
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 15px;
+  font-weight: 400;
+  font-size: 1.4em;
 `;
 
 export const HeadingBlue = styled.h2`
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
+  font-weight: 700;
+  font-size: 1.1em;
   color: #5725cc;
 `;
 
 export const SubText = styled.p`
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 19px;
+  font-weight: 600;
+  font-size: 1em;
   color: #767373;
 `;
 
@@ -49,20 +41,34 @@ export const TextCenter = styled.div`
 `;
 
 export const Button = styled.button`
-  padding: 15px;
+  padding: 10px;
   background-color: hsl(257, 69%, 47%);
-  border: none;
   color: white;
-  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border: none;
+  border-radius: 5px;
+  opacity: 1;
+  transition: 0.3s;
+  &:hover {
+    border-radius: 0px;
+    opacity: 0.8;
+  }
 `;
 
 export const ButtonOutline = styled.button`
   padding: 10px;
   border-color: hsl(257, 69%, 47%);
   background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   border-radius: 5px;
   color: hsl(258, 69%, 47%, 1);
   cursor: pointer;
+  opacity: 1;
+  transition: 0.3s;
+  &:hover {
+    border-radius: 0px;
+    opacity: 0.8;
+  }
 `;
 
 export const Logo = styled.div`
@@ -72,4 +78,21 @@ export const Logo = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+`;
+
+export const ListContainer = styled.ul`
+  padding: 0;
+  margin: 0;
+`;
+
+export const ListItem = styled.li`
+  list-style: none;
+  cursor: pointer;
+`;
+
+export const LogoImgFooter = styled.img`
+  display: block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border-radius: 5px;
 `;

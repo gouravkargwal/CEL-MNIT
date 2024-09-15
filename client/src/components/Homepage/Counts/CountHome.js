@@ -3,51 +3,43 @@ import styled from "styled-components";
 import { Flex } from "../../../UI";
 import { Book } from "@mui/icons-material";
 
-const CountContainer = styled.div`
-  display: flex;
+const FlexContainer = styled(Flex)`
   justify-content: space-evenly;
   background-color: hsl(257, 69%, 47%);
   padding: 20px;
   color: white;
-  @media (max-width: 730px) {
-    align-items: center;
-    flex-direction: column;
-  }
 `;
-const CountInfo = styled(Flex)`
+const FlexCount = styled(Flex)`
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  @media (max-width: 730px) {
-    margin: 20px;
-  }
 `;
 
 const CountHome = () => {
   return (
     <>
-      <CountContainer>
-        <CountInfo>
+      <FlexContainer>
+        <FlexCount>
           <Book sx={{ fontSize: 60 }} />
           <h2>86+</h2>
-          <h2>Hello</h2>
-        </CountInfo>
-        <CountInfo>
+          <h1>Hello</h1>
+        </FlexCount>
+        <FlexCount>
           <Book sx={{ fontSize: 60 }} />
           <h2>86+</h2>
-          <h2>Hello</h2>
-        </CountInfo>
-        <CountInfo>
+          <h1>Hello</h1>
+        </FlexCount>
+        <FlexCount>
           <Book sx={{ fontSize: 60 }} />
           <h2>86+</h2>
-          <h2>Hello</h2>
-        </CountInfo>
-        <CountInfo>
+          <h1>Hello</h1>
+        </FlexCount>
+        <FlexCount>
           <Book sx={{ fontSize: 60 }} />
           <h2>86+</h2>
-          <h2>Hello</h2>
-        </CountInfo>
-      </CountContainer>
+          <h1>Hello</h1>
+        </FlexCount>
+      </FlexContainer>
     </>
   );
 };

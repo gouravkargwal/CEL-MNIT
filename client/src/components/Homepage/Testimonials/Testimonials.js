@@ -9,7 +9,10 @@ import image1 from "./books_759.jpg";
 const SliderContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  border: 2px solid lightgray;
+  padding: 20px;
+  margin: 10px;
+  /* border: 2px solid lightgray; */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   @media (max-width: 800px) {
     align-items: center;
     flex-direction: column;
@@ -18,8 +21,8 @@ const SliderContainer = styled.div`
 const SliderBox1 = styled.img`
   display: block;
   width: 50%;
-  @media (max-width: 400px) {
-    width: 100%;
+  @media (max-width: 800px) {
+    display: none !important;
   }
 `;
 const SliderBox2 = styled.div`

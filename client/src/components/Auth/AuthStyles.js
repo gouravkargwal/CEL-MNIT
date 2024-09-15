@@ -1,10 +1,6 @@
 import styled from "styled-components";
-import SidebarImage from "./caleb-george-5sF6NrB1MEg-unsplash.jpg";
-import BgImage from "./rianne-zuur-2NITiiVwWBE-unsplash.jpg";
 
 export const Container = styled.div`
-  @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap");
-  font-family: "Roboto Mono", monospace;
   display: flex;
   flex-direction: row;
   height: 100vh;
@@ -12,20 +8,22 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   padding: 20px;
-  background-image: url(${BgImage});
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 1;
 `;
 
 export const Sidebar = styled.div`
-  display: block;
+  display: flex;
+  flex-direction: column;
   height: 80vh;
   width: 40vw;
+  padding: 20px;
   max-width: 370px;
-  background-image: url(${SidebarImage});
+  background-image: url(${(props) => props.bgImg});
   background-size: cover;
   background-repeat: no-repeat;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
   @media (max-width: 800px) {
     display: none;
   }
@@ -41,8 +39,15 @@ export const FormContainer = styled.form`
   padding: 20px;
   align-items: stretch;
   justify-content: space-evenly;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   @media (max-width: 800px) {
     width: 80vw;
+    border-radius: 5px;
   }
 `;
 export const AvatarImage = styled.img`
@@ -61,10 +66,16 @@ export const Button = styled.button`
   background-color: hsl(208, 100%, 54%);
   color: white;
   border-radius: 5px;
+  opacity: 0.6;
+  transition: 0.3s;
+  font-size: 1em;
   &:hover {
-    background-color: hsl(270, 98%, 52%);
+    opacity: 1;
+    border-radius: 0;
   }
 `;
 export const Title = styled.h1`
   color: hsl(245, 93%, 75%);
+  font-size: 2em;
+  font-weight: 700;
 `;

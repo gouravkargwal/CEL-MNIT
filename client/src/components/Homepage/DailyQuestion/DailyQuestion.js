@@ -12,6 +12,7 @@ const PostingCard = styled.div`
   background: #ffffff;
   border-radius: 15px;
   padding: 20px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
 `;
 const PostCardFlexConatiner = styled.div`
   display: flex;
@@ -25,7 +26,7 @@ const PostCardInfo = styled.div`
 const DailyQuestion = () => {
   return (
     <>
-      <ContainerPadding grey>
+      <ContainerPadding>
         <TextCenter>
           <Heading>Question of the day</Heading>
           <SubHeading>

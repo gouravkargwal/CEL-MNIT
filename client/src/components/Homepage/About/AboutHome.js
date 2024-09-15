@@ -11,25 +11,28 @@ const InfoContainer = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  @media (max-width: 800px) {
-    flex-direction: column;
-    align-items: center;
-  }
 `;
 const Info = styled.div`
-  padding: 20px 0;
+  padding: 20px;
+  @media (max-width: 800px) {
+    padding: 0px;
+  }
 `;
 const FlexIcon = styled.div`
   display: flex;
   justify-content: space-evenly;
+  @media (max-width: 800px) {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
 `;
 const Img = styled.img`
   display: block;
-  width: 40%;
-  margin-right: 10px;
+  width: 30vw;
+  max-width: 300px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   @media (max-width: 800px) {
-    margin-right: 0px;
-    width: 100%;
+    display: none;
   }
 `;
 const ImgSvg = styled.img`
@@ -48,28 +51,10 @@ const AboutHome = () => {
           <Heading>LEARN AT YOUR OWN PACE</Heading>
           <HeadingBlue>CeL | MNIT JAIPUR</HeadingBlue>
           <SubText>
-            The centre for e-Learning (CeL), established at the ICT Centre, MNIT
-            Jaipur, aims to impart quality education, in the easiest manner,
-            with equitable access to learners across the nation. The main motto
-            of CeL is to digitalize learning by conducting seminars, learning
-            events, workshops in different fields. The portal will offer video
-            lectures (recorded as well as live series), interview experiences of
-            placed students, and many more, to enable students to learn at their
-            own pace and pursue their interests.
-          </SubText>
-          <SubText>
-            Everyone does not have the same view of the world, and their
-            understanding of something may differ dramatically from yours.
-            Sometimes you can even create something awesome in your career by
-            asking their thoughts or inputs on something you might not even know
-            or have heard of. CeL will give you chance to grow, to be open to
-            new ideas, new ways of doing things, or new ways of thinking.
-          </SubText>
-          <SubText>
-            Learn Higher also states that meeting new people can offer
-            encouragement, solutions to common problems, and advice for how to
-            handle challenges. CeL will provide you a great way to meet other
-            people in your area with shared interests
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book.
           </SubText>
         </Info>
       </InfoContainer>
@@ -79,7 +64,7 @@ const AboutHome = () => {
           <FlexIcon>
             <ImgSvg src={Star} />
             <div>
-              <Heading>Mentor that fits you</Heading>
+              <HeadingBlue>Mentor that fits you</HeadingBlue>
               <p>
                 Good mentors are enthusiastic people, and we have exact that
                 team for you. Our team is dedicated and a good mentor is always
@@ -92,7 +77,7 @@ const AboutHome = () => {
           <FlexIcon>
             <ImgSvg src={Comp} />
             <div>
-              <Heading>Diversify and extend your reach</Heading>
+              <HeadingBlue>Diversify and extend your reach</HeadingBlue>
               <p>
                 With our webinars, you can diversify and extend your reach and
                 can set a solid foundation for your future with personal and
@@ -103,7 +88,7 @@ const AboutHome = () => {
           <FlexIcon>
             <ImgSvg src={Book} />
             <div>
-              <Heading>Unmatchable experience</Heading>
+              <HeadingBlue>Unmatchable experience</HeadingBlue>
               <p>
                 We provide unmatchable experience, We make connections that set
                 you forward. With personalized training and courses from the

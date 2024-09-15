@@ -7,49 +7,18 @@ import {
   HeadingBlue,
   Heading,
 } from "../../../UI";
-import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import CourseCard from "../../Courses/CourseCard";
 
 const CourseCardContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  @media (max-width: 400px) {
-    flex-direction: column;
-    justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  margin: 20px auto;
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr 1fr;
   }
-  @media (max-width: 768px) {
-    justify-content: center;
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
   }
-`;
-
-const CourseCard = styled.div`
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  margin: 10px;
-  width: 300px;
-  box-shadow: 0px 4px 4px 0px hsla(0, 0%, 0%, 0.25);
-`;
-const CourseImage = styled.div`
-  background-image: url(${(props) => props.imgsrc});
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 30vh;
-`;
-const CourseInfo = styled.div`
-  padding: 20px;
-`;
-const CourseCardFooter = styled.div`
-  display: flex;
-  justify-content: space-evenly;
-`;
-const Logo = styled.div`
-  background-image: url("../../Navbar/CEL logo (1) 1.jpg");
-  margin-top: 10px;
-  background-size: cover;
-  width: 50px;
-  height: 25px;
 `;
 const Courses = (props) => {
   return (
@@ -60,64 +29,42 @@ const Courses = (props) => {
         <HeadingBlue>#Topmost Faculties</HeadingBlue>
       </TextCenter>
       <CourseCardContainer>
-        <CourseCard>
-          <CourseImage
-            imgsrc={
-              "https://www.freecodecamp.org/news/content/images/2021/06/Ekran-Resmi-2019-11-18-18.08.13.png"
-            }
-          ></CourseImage>
-          <CourseInfo>
-            <Heading>React Js</Heading>
-            <SubHeading>Lorem djkasd asdksa</SubHeading>
-          </CourseInfo>
-          <CourseCardFooter>
-            <Logo></Logo>
-            <p>Oct 10</p>
-          </CourseCardFooter>
-        </CourseCard>
-        <CourseCard>
-          <CourseImage
-            imgsrc={
-              "https://www.freecodecamp.org/news/content/images/2021/06/Ekran-Resmi-2019-11-18-18.08.13.png"
-            }
-          ></CourseImage>
-          <CourseInfo>
-            <Heading>React Js</Heading>
-            <SubHeading>Lorem djkasd asdksa</SubHeading>
-          </CourseInfo>
-          <CourseCardFooter>
-            <Logo></Logo>
-            <p>Oct 10</p>
-          </CourseCardFooter>
-        </CourseCard>
-        <CourseCard>
-          <CourseImage
-            imgsrc={"https://krify.co/wp-content/uploads/2019/07/Nodejs.jpg"}
-          ></CourseImage>
-          <CourseInfo>
-            <Heading>React Js</Heading>
-            <SubHeading>Lorem djkasd asdksa</SubHeading>
-          </CourseInfo>
-          <CourseCardFooter>
-            <Logo></Logo>
-            <p>Oct 10</p>
-          </CourseCardFooter>
-        </CourseCard>
-        <CourseCard>
-          <CourseImage
-            imgsrc={
-              "https://www.freecodecamp.org/news/content/images/2021/06/Ekran-Resmi-2019-11-18-18.08.13.png"
-            }
-          ></CourseImage>
-          <CourseInfo>
-            <Heading>React Js</Heading>
-            <SubHeading>Lorem djkasd asdksa</SubHeading>
-          </CourseInfo>
-          <CourseCardFooter>
-            <Logo></Logo>
-            <p>Oct 10</p>
-          </CourseCardFooter>
-        </CourseCard>
+        <CourseCard
+          imgName={
+            "https://qphs.fs.quoracdn.net/main-qimg-f9514ea83444ef5dfded019d798ca48b-lq"
+          }
+          authorName="Jose Portilla"
+          authorImg={
+            "https://pbs.twimg.com/profile_images/580383480850358272/hGdszCo0_400x400.jpg"
+          }
+        />
+        <CourseCard
+          imgName={
+            "https://qphs.fs.quoracdn.net/main-qimg-f9514ea83444ef5dfded019d798ca48b-lq"
+          }
+          authorName="Jose Portilla"
+          authorImg={
+            "https://pbs.twimg.com/profile_images/580383480850358272/hGdszCo0_400x400.jpg"
+          }
+        />
+        <CourseCard
+          imgName={
+            "https://qphs.fs.quoracdn.net/main-qimg-f9514ea83444ef5dfded019d798ca48b-lq"
+          }
+          authorName="Jose Portilla"
+          authorImg={
+            "https://pbs.twimg.com/profile_images/580383480850358272/hGdszCo0_400x400.jpg"
+          }
+        />
+        <CourseCard
+          imgName={
+            "https://qphs.fs.quoracdn.net/main-qimg-f9514ea83444ef5dfded019d798ca48b-lq"
+          }
+          authorName="Jose Portilla"
+          authorImg={
+            "https://pbs.twimg.com/profile_images/580383480850358272/hGdszCo0_400x400.jpg"
+          }
+        />
       </CourseCardContainer>
     </ContainerPadding>
   );
